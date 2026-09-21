@@ -15,6 +15,7 @@ class StepViewer:
         """
         self.max_iterations = max_iterations
         self.current_iteration = 1
+        self.done = False
         
         # 1. get axes
         self.fig = fig
@@ -44,6 +45,7 @@ class StepViewer:
         else:
             self.btn_next.description = "Finished Plotting"
             self.btn_next.disabled = True
+            self.done = True
 
     def show(self):
         """Public method to cleanly render the widget layout inside Jupyter."""
