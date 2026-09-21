@@ -120,6 +120,7 @@ class NodeExperimentsDirectory:
 
     def close(self) -> None:
         """Flush and upload the log. Idempotent; the instance is done after this."""
+        self.publish()
         if self._closed:
             return
         self._closed = True
