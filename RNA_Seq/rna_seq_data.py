@@ -211,6 +211,7 @@ class RNASeq_Data():
         # Round, don't truncate: astype(int) turns 0.9 into 0 and biases every gene downward.
         p_table = p_table.round().astype(int)
     
+        # TODO: consider a fancier design like '~sample + treatment + sample:treatment'
         design = f"~{level}"
         contrast = np.array([0, 1])
         params = {
