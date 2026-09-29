@@ -1,5 +1,4 @@
 import seaborn as sns
-from ._flow_violin import flow_violin
 
 """
 [
