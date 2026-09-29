@@ -212,6 +212,9 @@ class RNASeq_Data():
         p_table = p_table.round().astype(int)
     
         # TODO: consider a fancier design like '~sample + treatment + sample:treatment'
+        # Consider: https://rstudio-pubs-static.s3.amazonaws.com/329027_593046fb6d7a427da6b2c538caf601e1.html
+        # Consider: https://www.biostars.org/p/221122/
+        # Consider: R-formula cheatsheet - https://www.econometrics.blog/post/the-r-formula-cheatsheet/
         design = f"~{level}"
         contrast = np.array([0, 1])
         params = {
