@@ -1,4 +1,7 @@
-from .color_palettes import *
+from .color_palettes import black_red_pastel_palette
+from .color_palettes import black_blue_pastel_palette
+from .color_palettes import black_green_pastel_palette
+from .color_palettes import black_yellow_pastel_palette
 
 GENES_OF_INTEREST = [
     "DNMT3A",
@@ -22,6 +25,7 @@ SCREEN_GENES = {
         "LAMTOR1", # Daniel LX-2 screen hit
         "ZNF259", # Daniel LX-2 screen hit
         "PFKFB3", # Daniel LX-2 screen hit
+        "TGFBR2", # Daniel LX-2 screen hit
         "C16orf87", # proposed renamed HDIP for HDAC-interacting protein, Daniel LX-2 screen hit
     ],
     "LX2 below thresh": [ # Daniel LX-2 screen below threshold
@@ -54,6 +58,7 @@ FIBROSIS_GENES = [
     "FOXC2",
     "SERPINE1",
     "ACTA1",
+    "ACTA2",
     "YAP1",
     "LTBP2",
     "WWTR1", # TAZ, another supposed mechanosensitive transcription factor
@@ -66,3 +71,51 @@ FIBROSIS_GENES = [
     "SPI1", # see "PU.1 controls fibroblast..." (2019)
     "SMAD2",
 ]
+
+CONSTRUCT_NAME_DICT = {
+    "zim3": "dCas9-ZIM3",
+    "ZIM3": "dCas9-ZIM3",
+    "ARS001": "dCas9-ZIM3",
+    "pARS001": "dCas9-ZIM3",
+    "pARS1": "dCas9-ZIM3",
+    "pCH45": "multiAsCas12a-KOX1",
+    "pARS002": "multiAsCas12a-ZIM3",
+    "pRA2": "hyperLbCas12a-KOX1",
+    "pCH95": "H3t-D3L-dCas9",
+    "pCH96": "H3t-D3L-dCas9-KOX1",
+    "pCH97": "H3t-KOX1-D3L-dCas9",
+    "HEK-CLTA": "HEK",
+    "sgCLTA-1X": "sgCLTA",
+    "sgCLTA-20X": "sgCLTA",
+    "Mock": "LX2",
+    "Ctrl": "Unstained",
+    "LX-2": "LX2",
+    "LX2": "LX2",
+}
+
+GUIDE_NAME_DICT = {
+    "_HEK_" : "CLTA-",
+    "_HEK-CLTA_" : "CLTA+",
+    "-1X" : "1X",
+    "-20X" : "20X",
+    "Mock" : "LX-2",
+    "Parental" : "",
+    "Unstained" : "Ab-",
+    "Stained" : "Ab+",
+    "sgNT": "NT",
+    "gLG20": "NT",
+    "no1ary" : "1°Ab-",
+    "no1ab" : "1°Ab-",
+    "w1ary" : "1°Ab+",
+    "w1ab": "1°Ab+",
+    "Stained" : "1°Ab+",
+    "DC01" : "CD81",
+    "sgDC01" : "CD81",
+    "DC02" : "B2M",
+    "sgDC02" : "B2M",
+    "DC03": "Col1a1",
+    "sgDC03": "Col1a1",
+    "gDC03": "Col1a1" 
+}
+
+

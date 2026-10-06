@@ -1,4 +1,9 @@
 import seaborn as sns
+import numpy as np
+
+def darken_palette(palette):
+    dark_palette = np.clip(np.array(palette) - [0.25, 0.25, 0.25], a_min=0, a_max=1)
+    return dark_palette
 
 """
 [

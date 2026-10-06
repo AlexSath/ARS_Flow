@@ -1,4 +1,4 @@
-from typing import Union
+from typing import Union, List
 from types import NoneType
 import warnings
 
@@ -126,7 +126,7 @@ def flow_violin(
     hue: Union[NoneType, str]=None,
     palette: Union[NoneType, _ColorPalette]=None,
     color: Union[NoneType, str, tuple]=None,
-    order: Union[NoneType, list[str]]=None, #Pass list of values in desired order for plotting.
+    order: Union[NoneType, List[str]]=None, #Pass list of values in desired order for plotting.
     split: bool=False, #whether to split violin pairs (should be combined with hue)
     log_y_axis: bool=False,
     native_scale: bool=False, #make both axes plot numbers on a line (instead of categories)
@@ -134,11 +134,11 @@ def flow_violin(
     density_norm: str='count',
     xlabel: Union[NoneType, str]=None,
     ylabel: Union[NoneType, str]=None,
-    legend_labels: Union[NoneType, list[str]]=None,
+    legend_labels: Union[NoneType, List[str]]=None,
     shift: float=0.03, # the shift that the whiskers are subjected to
     violin_linewidth: float=1,
-    hue_order: Union[NoneType, list[str]]=None,
-    ylim: Union[NoneType, tuple[float]]=None,
+    hue_order: Union[NoneType, List[str]]=None,
+    ylim: Union[NoneType, List[float]]=None,
     ax: Union[NoneType, Axes]=None,
 ):
     # assign() returns a copy, so the caller's dataframe is no longer mutated

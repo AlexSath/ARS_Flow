@@ -12,5 +12,5 @@ git checkout 0.5.1 --force
 pip install -v --no-deps --no-build-isolation .
 cd ~
 pip install "seaborn>0.13" "cython<3" pkgconfig adjusttext scverse_misc donfig numcodecs google-crc32c
-pip install --no-deps --no-build-isolation "h5py==3.11"
+pip install --no-deps --no-build-isolation "h5py==3.11" zarr anndata meson-python ninja 
 
